@@ -1,0 +1,37 @@
+.crosshair{
+  position: fixed;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  top: calc(50vh - 10px);
+  right: calc(50vw - 10px);
+}
+#Position{
+  position: fixed;
+  z-index: 2;
+  width: fit-content;
+  height: 20px;
+  background-color: #000000cc;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-size: 18px;
+  color: #ffffff;
+  top: 12px;
+  left: 12px;
+  background-color: #292929;
+  box-shadow:
+    /* Right & bottom */
+    6px 6px #1b1b1b,
+    0 6px #1b1b1b,
+    6px 0 #1b1b1b,
+    /* Left & top */
+    -6px -6px #484848,
+    -6px 0 #484848,
+    0 -6px #484848,
+    /* Corner top right */
+    6px -6px #2e2a2a,
+    /* Corner bottom left */
+    -6px 6px #363434;
+  min-width: 98px;
+  text-align: center;
+}

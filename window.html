@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name</title>
+    <script type="text/javascript" src="./manager/load.js"></script>
+    <!-- [START] The libraries -->
+    <link rel="stylesheet" href="./library/animateCSS/animate.min.css">
+    <script type="text/javascript" src="./library/howlerJS/howler.min.js"></script>
+    <script type="text/javascript" src="./library/jquery.min.js"></script>
+    <script type="text/javascript" src="./library/BabylonJS/babylon.js"></script>
+    <script type="text/javascript" src="./library/BabylonJS/loaders/babylonjs.loaders.min.js"></script>
+    <!--<script type="module" src="./library/noa/index.js"></script>-->
+    <script type="text/javascript" src="./library/pep.min.js"></script>
+    <!-- [END] The libraries -->
+    <script type="text/javascript" src="./manager/check.js"></script>
+    <script type="text/javascript" src="./sound/sounds.js"></script>
+    <script type="text/javascript" src="./UI/mainGameMenus.js"></script>
+    <script type="text/javascript" src="./UI/start.js"></script>
+    <script type="text/javascript" src="./UI/clicks.js"></script>
+    <script type="text/javascript" src="./UI/alerts.js"></script>
+    <script type="text/javascript" src="./UI/in_game_menus.js"></script>
+    <link rel="stylesheet" href="./UI/Menus.css">
+    <link rel="stylesheet" href="./UI/start.css">
+    <link rel="stylesheet" href="./font/fonts.css">
+</head>
+
+<body>
+    <div class="splash">
+        <img class="icon animated delay-06s fast" src="./UI/icon/EnderAdel.png">
+        <div class="text animated">EnderCommunity</div>
+        <div class="smallText animated delay-08s fast-ish">All made using web technology</div>
+    </div>
+    <div class="splash2" style="display: none;">
+        <img src="./UI/icon/icon-128.png">
+    </div>
+    <div class="mainMenu" style="display: none;">
+        <img class="TheGameLogo" src="./UI/logo/TheGameLogo.png">
+        <div class="middle">
+            <button id="singleplayer" large>Singleplayer</button>
+            <button id="multiplayer" large>Multiplayer</button>
+            <button id="settings" large>Settings</button>
+        </div>
+        <div class="bottom">
+            <button id="signIn">Sign In</button>
+            <button id="exit">Exit the game</button>
+        </div>
+        <div class="PaticlesC">
+            <div class="Particles1 delay-1" style="left: 2%; bottom: 0px;"></div>
+            <div class="Particles1 delay-2" style="left: 8%; bottom: 0px;"></div>
+            <div class="Particles1 delay-4" style="left: 10%; bottom: 0px;"></div>
+            <div class="Particles1 delay-3" style="left: 34%; bottom: 0px;"></div>
+            <div class="Particles1 delay-1" style="left: 82%; bottom: 0px;"></div>
+            <div class="Particles1 delay-4" style="left: 72%; bottom: 0px;"></div>
+            <div class="Particles2 delay-1" style="left: 95%; bottom: 0px;"></div>
+            <div class="Particles2 delay-2" style="left: 24%; bottom: 0px;"></div>
+            <div class="Particles2 delay-3" style="left: 38%; bottom: 0px;"></div>
+            <div class="Particles2 delay-3" style="left: 67%; bottom: 0px;"></div>
+            <div class="Particles2 delay-4" style="left: 59%; bottom: 0px;"></div>
+            <div class="Particles2 delay-1" style="left: 16%; bottom: 0px;"></div>
+            <div class="Particles3 delay-2" style="left: 22%; bottom: 0px;"></div>
+            <div class="Particles3 delay-1" style="left: 42%; bottom: 0px;"></div>
+            <div class="Particles3 delay-3" style="left: 27%; bottom: 0px;"></div>
+            <div class="Particles3 delay-4" style="left: 72%; bottom: 0px;"></div>
+            <div class="Particles3 delay-2" style="left: 36%; bottom: 0px;"></div>
+            <div class="Particles3 delay-4" style="left: 90%; bottom: 0px;"></div>
+            <div class="Particles4 delay-3" style="left: 26%; bottom: 0px;"></div>
+            <div class="Particles4 delay-4" style="left: 48%; bottom: 0px;"></div>
+            <div class="Particles4 delay-4" style="left: 52%; bottom: 0px;"></div>
+            <div class="Particles4 delay-2" style="left: 20%; bottom: 0px;"></div>
+            <div class="Particles4 delay-1" style="left: 40%; bottom: 0px;"></div>
+            <div class="Particles4 delay-2" style="left: 80%; bottom: 0px;"></div>
+            <div class="Particles5 delay-1" style="left: 39%; bottom: 0px;"></div>
+            <div class="Particles5 delay-3" style="left: 21%; bottom: 0px;"></div>
+            <div class="Particles5 delay-4" style="left: 84%; bottom: 0px;"></div>
+            <div class="Particles5 delay-2" style="left: 73%; bottom: 0px;"></div>
+            <div class="Particles5 delay-4" style="left: 66%; bottom: 0px;"></div>
+            <div class="Particles5 delay-1" style="left: 48%; bottom: 0px;"></div>
+        </div>
+    </div>
+    <div class="settingsMenu" style="display: none;">
+        <center class="cubeC">
+            <text class="settingsText animated fadeIn delay-1s slow">
+          <button id="settingsBackButton" backbutton>
+            <img src="./UI/image/back-caret.svg">
+          </button>
+          Settings
+        </text>
+            <div class="settingsCubeGlow animated fadeIn delay-00s"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-06s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-03s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-05s --overGlow3"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-02s --overGlow2"></div>
+            <div class="settingsCube --blueCube1 animated fadeIn delay-01s --overGlow"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-02s"></div>
+            <div class="settingsCube --blueCube1 animated fadeIn delay-01s --overGlow"></div>
+            <div class="settingsCube --blueCube1 animated fadeIn delay-01s"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-02s --overGlow3"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-03s --overGlow2"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-02s --overGlow3"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-03s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-04s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-05s"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube --greyCube2 animated fadeIn delay-06s"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-04s --overGlow2"></div>
+            <div class="settingsCube --blueCube1 animated fadeIn delay-03s --overGlow"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-04s --overGlow3"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-03s --overGlow3"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-02s --overGlow2"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-02s --overGlow3"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-03s"></div>
+            <div class="settingsCube --blueCube1 animated fadeIn delay-05s --overGlow"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-04s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-06s"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube --greyCube2 animated fadeIn delay-06s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-06s"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-04s"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-04s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-04s"></div>
+            <div class="settingsCube --greyCube2 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-06s"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube settingsCubeWallaper --blueCube3 animated fadeIn delay-08s" style="top: 8vw; left: 4vw;"></div>
+            <div class="settingsCube settingsCubeWallaper --blueCube4 animated fadeIn delay-09s" style="top: 4vw; right: 8vw;"></div>
+        </center>
+        <center class="Content">
+            <div class="settingsTitle animated fadeIn delay-04s fast-ish">General</div>
+            <div class="settingsOption animated fadeIn delay-05s fast-ish">
+                <img>
+                <button>Account</button>
+            </div>
+            <div class="settingsOption animated fadeIn delay-05s fast-ish">
+                <img>
+                <button>Video</button>
+            </div>
+            <div class="settingsOption animated fadeIn delay-05s fast-ish">
+                <img>
+                <button>Audio</button>
+            </div>
+            <div class="settingsOption animated fadeIn delay-05s fast-ish">
+                <img>
+                <button>Language</button>
+            </div>
+            <div class="settingsOption animated fadeIn delay-05s fast-ish">
+                <img>
+                <button>Storage</button>
+            </div>
+            <div class="settingsTitle animated fadeIn delay-06s fast-ish">Controls</div>
+            <div class="settingsOption animated fadeIn delay-07s fast-ish">
+                <img>
+                <button>Shortcuts</button>
+            </div>
+            <div class="settingsOption animated fadeIn delay-07s fast-ish">
+                <img>
+                <button>Sensitivity</button>
+            </div>
+            <div class="settingsTitle animated fadeIn delay-06s fast-ish">Updates</div>
+            <div class="settingsOption animated fadeIn delay-07s fast-ish">
+                <img>
+                <button>Updates</button>
+            </div>
+            <div class="settingsOption animated fadeIn delay-07s fast-ish">
+                <img>
+                <button>Changes</button>
+            </div>
+        </center>
+    </div>
+    <div class="singleplayerWorldsMenu" style="display: none;">
+        <center class="cubeC">
+            <text class="settingsText animated fadeIn delay-1s slow">
+          <button id="singleplayerWorldsBackButton" backbutton>
+            <img src="./UI/image/back-caret.svg">
+          </button>
+          Singleplayer
+        </text>
+            <div class="settingsCubeGlow animated fadeIn delay-00s"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-06s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-03s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-05s --overGlow3"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-02s --overGlow2"></div>
+            <div class="settingsCube --blueCube1 animated fadeIn delay-01s --overGlow"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-02s"></div>
+            <div class="settingsCube --blueCube1 animated fadeIn delay-01s --overGlow"></div>
+            <div class="settingsCube --blueCube1 animated fadeIn delay-01s"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-02s --overGlow3"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-03s --overGlow2"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-02s --overGlow3"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-03s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-04s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-05s"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube --greyCube2 animated fadeIn delay-06s"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-04s --overGlow2"></div>
+            <div class="settingsCube --blueCube1 animated fadeIn delay-03s --overGlow"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-04s --overGlow3"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-03s --overGlow3"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-02s --overGlow2"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-02s --overGlow3"></div>
+            <div class="settingsCube --blueCube2 animated fadeIn delay-03s"></div>
+            <div class="settingsCube --blueCube1 animated fadeIn delay-05s --overGlow"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-04s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-06s"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube --greyCube2 animated fadeIn delay-06s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-06s"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-04s"></div>
+            <div class="settingsCube --blueCube3 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-04s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --blueCube4 animated fadeIn delay-04s"></div>
+            <div class="settingsCube --greyCube2 animated fadeIn delay-05s"></div>
+            <div class="settingsCube --greyCube1 animated fadeIn delay-06s"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube"></div>
+            <div class="settingsCube settingsCubeWallaper --blueCube3 animated fadeIn delay-08s" style="top: 4vw; left: 8vw;"></div>
+            <div class="settingsCube settingsCubeWallaper --blueCube4 animated fadeIn delay-09s" style="top: 8vw; right: 8vw;"></div>
+        </center>
+        <center class="Content">
+            <div class="settingsTitle animated fadeIn delay-04s fast-ish">Most recent world</div>
+            <div class="worldsOption--Big animated fadeIn delay-05s fast-ish">
+                <img>
+                <div>
+                    <div class="title">The world's name</div>
+                    <div class="playTime">10/5/2020 - Sunday</div>
+                </div>
+                <button onclick="loadAWorld(0);">Play now!</button>
+                <div class="clickSound1 worldSettings"></div>
+            </div>
+            <div class="settingsTitle animated fadeIn delay-06s fast-ish">Your worlds</div>
+            <div class="worldsOption animated fadeIn delay-07s fast-ish">
+                <img>
+                <div class="clickSound1 worldSettings"></div>
+                <button onclick="loadAWorld(0);">Play</button>
+                <div class="clickSound1 deleteWorld"></div>
+            </div>
+            <h2 class="createWorldRnadomMessage">Are you bored with your worlds?</h2>
+            <button id="newWorld">Create a new world</button>
+            <div class="settingsTitle animated fadeIn delay-08s fast-ish">Transferred worlds</div>
+            <div class="worldsOption animated fadeIn delay-09s fast-ish">
+                <img>
+                <button>Download</button>
+            </div>
+        </center>
+    </div>
+    <div class="loadingMenu" style="display: none;">
+        <img class="TheGameLogo" src="./UI/logo/TheGameLogo.png">
+    </div>
+    <div id="FPS" class="FPS"></div>
+    <!-- Remove later/replace with an F2 menu -->
+    <canvas id="WorldCanvas" class="worldWindow" style="display: none;"></canvas>
+    <div id="WorldCanvas--GUI" style="display: none;">
+        <img class="crosshair" src="./UI/crosshair.png">
+        <div id="Position"></div>
+    </div>
+    <div class="alertBakcground" style="display: none;"></div>
+    <div class="alert" style="display: none;">
+        <div class="OnlyOk" style="display: none;">
+            <text class="title"></text>
+            <text class="message"></text>
+            <button id="OnlyOk--Button">Ok</button>
+        </div>
+        <div class="YesOrNo" style="display: none;">
+            <text class="title"></text>
+            <text class="message"></text>
+            <button id="YesOrNo--No" s>No</button>
+            <button id="YesOrNo--Yes">Yes</button>
+        </div>
+    </div>
+    <!-- start the engine -->
+    <script type="text/javascript" src="./engine/start.js"></script>
+    <!-- start the engine -->
+    <!-- In game menus -->
+    <link rel="stylesheet" href="./UI/in_game_screen.css">
+    <!-- In game menus -->
+    <!-- Saves management -->
+    <script type="text/javascript" src="./engine/save_creator.js"></script>
+    <script type="text/javascript" src="./engine/saves_manager.js"></script>
+    <!-- Saves management -->
+    <!-- World generation -->
+    <script type="text/javascript" src="./engine/world_generation/seed_worker.js"></script>
+    <script type="text/javascript" src="./engine/materials.js"></script>
+    <script type="text/javascript" src="./engine/world_generation/blocks.js"></script>
+    <script type="text/javascript" src="./engine/world_generation/chunk_generator.js"></script>
+    <script type="text/javascript" src="./engine/world_generation/world_generation.js"></script>
+    <script type="text/javascript" src="./engine/world_generation/world_lighting.js"></script>
+    <script type="text/javascript" src="./engine/world_generation/blocks_world_generation.js"></script>
+    <!-- World generation -->
+    <!-- scripts to add to the <head> tag -->
+    <script type="text/javascript" src="./engine/performance_manager/scene_optimizer.js"></script>
+    <script type="text/javascript" src="./engine/user_navigation/camera.js"></script>
+    <script type="text/javascript" src="./engine/lighting.js"></script>
+    <script type="text/javascript" src="./engine/action_manager.js"></script>
+    <script type="text/javascript" src="./engine/block_selector.js"></script>
+    <script type="text/javascript" src="./engine/render.js"></script>
+    <!-- scripts to add to the <head> tag -->
+</body>
+
+</html>
